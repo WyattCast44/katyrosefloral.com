@@ -50,15 +50,15 @@
             defer></script>
 </head>
 
-<body class="bg-white overflow-x-hidden antialiased text-gray-900">
+<body class="overflow-x-hidden antialiased text-gray-900 bg-white">
 
-    <div class="container mx-auto px-5 md:px-0"
+    <div class="container px-5 mx-auto md:px-0"
          style="max-width: 850px;">
 
         <!-- Logo Header -->
         <header class="py-10">
 
-            <div class="flex items-center justify-center relative">
+            <div class="relative flex items-center justify-center">
 
                 <h1 class="hidden"
                     id="top">Katy Rose Floral - Wedding & Specialist in Katy Texas</h1>
@@ -66,7 +66,7 @@
                 <a href="/">
                     <img src="dist/logo-full.png"
                          alt="Katy Rose Floral Logo"
-                         class="w-96 z-10">
+                         class="z-10 w-96">
                 </a>
             </div>
 
@@ -80,11 +80,11 @@
 
             <div class="py-5">
 
-                <p class="text-3xl font-fancy italic">
+                <p class="text-3xl italic font-fancy">
                     Hello my Name is Beatrice Cooke,
                 </p>
 
-                <p class="text-2xl mt-5">
+                <p class="mt-5 text-2xl">
                     <span class="inline-block w-10"></span> I am the owner and designer for <span
                           class="italic">
                         Katy Rose Floral.
@@ -93,7 +93,7 @@
                     wedding and event business for over 10 years as a designer.
                 </p>
 
-                <p class="text-2xl mt-5">
+                <p class="mt-5 text-2xl">
                     <span class="inline-block w-10"></span> Our passion, experience and
                     professionalism are unveiled in our floral products and services. We strive to
                     bring creativity, honesty and attention to detail to each and every event. It
@@ -101,7 +101,7 @@
                     meaningful time in their life.
                 </p>
 
-                <p class="text-2xl mt-5">
+                <p class="mt-5 text-2xl">
                     <span class="inline-block w-10"></span> Katy Rose Floral proudly serves the Katy
                     Texas area for Weddings, Quinceaneras, Private and Corporate Events. We offer a
                     customized selection of Bridal Bouquets, Ceremony Flowers, including Garlands
@@ -117,17 +117,17 @@
         </section>
 
         <!-- Section Divider -->
-        <div class="w-full flex items-center justify-center md:my-20 my-10">
+        <div class="flex items-center justify-center w-full my-10 md:my-20">
             <img src="dist/divider-2.png"
                  alt=""
-                 class="md:h-32 h-24 w-auto">
+                 class="w-auto h-24 md:h-32">
         </div>
 
         <!-- Gallery Preview Section -->
         <section class="mb-20">
 
             <h2 id="gallery"
-                class="text-5xl text-center font-fancy md:mb-12 mb-8 pb-2 border-b">Our Gallery</h2>
+                class="pb-2 mb-8 text-5xl text-center border-b font-fancy md:mb-12">Our Gallery</h2>
 
             <div class="grid grid-cols-3 gap-5"
                  x-data="{ images: getImages()}">
@@ -137,10 +137,9 @@
                     <a :href="`dist/images/full/` + image + `.jpg`"
                        title="View this image in a slideshow"
                        data-glightbox=""
-                       class="block md:h-40 h-24 bg-gray-300 rounded bg-center bg-no-repeat bg-cover glightbox"
+                       class="block h-24 bg-gray-300 bg-center bg-no-repeat bg-cover rounded md:h-40 glightbox"
                        :style="`background-image: url(dist/images/thumbnails/` + image + `.jpg);`">
-                        <span class="
-                       hidden">
+                        <span class="hidden ">
                             Click to view
                             <img :src="`dist/images/full/` + image + `.jpg`"
                                  alt=""
@@ -153,7 +152,7 @@
 
             <a href="/gallery"
                title="View more photos in our gallery"
-               class="text-xl mt-5 block text-center">
+               class="block mt-5 text-xl text-center">
                 See more pictures here
                 <svg xmlns="http://www.w3.org/2000/svg"
                      width="24"
@@ -164,7 +163,7 @@
                      stroke-width="2"
                      stroke-linecap="round"
                      stroke-linejoin="round"
-                     class="feather feather-arrow-right inline-block">
+                     class="inline-block feather feather-arrow-right">
                     <line x1="5"
                           y1="12"
                           x2="19"
@@ -176,17 +175,17 @@
         </section>
 
         <!-- Section Divider -->
-        <div class="w-full flex items-center justify-center md:my-20 my-10">
+        <div class="flex items-center justify-center w-full my-10 md:my-20">
             <img src="dist/divider.png"
                  alt=""
-                 class="md:h-32 h-24 w-auto">
+                 class="w-auto h-24 md:h-32">
         </div>
 
         <!-- Reviews Section -->
         <section class="mb-10">
 
             <h2 id="reviews"
-                class="text-5xl text-center font-fancy md:mb-16 mb-8 pb-2 border-b">Reviews</h2>
+                class="pb-2 mb-8 text-5xl text-center border-b font-fancy md:mb-16">Reviews</h2>
 
             <div class="overflow-hidden">
 
@@ -246,65 +245,79 @@
         </section>
 
         <!-- Footer -->
-        <section class="border-t py-10 mt-15 flex items-center justify-between">
+        <section class="pt-5 pb-8 border-t mt-15">
 
-            <div class="text-gray-700">
-                &copy; Katy Rose Floral, LLC - Katy, Texas
-            </div>
+            <!-- Top Row -->
+            <nav class="flex items-center justify-start mb-3">
+                <a href="/"
+                   class="inline-block text-gray-700">Home</a>
+                <a href="/gallery"
+                   class="inline-block mx-4 text-gray-700">Gallery</a>
+                <a href="/contact"
+                   class="inline-block text-gray-700">Contact</a>
+            </nav>
 
-            <div class="flex items-center text-sm ">
+            <!-- Bottom Row -->
+            <div class="flex items-center justify-between">
+                <div class="text-gray-700">
+                    &copy; Katy Rose Floral, LLC - Katy, Texas
+                </div>
 
-                <a href="https://www.facebook.com/katyrosefloral"
-                   title="Check us out on Facebook"
-                   target="_blank"
-                   rel="noopener"
-                   rel="noreferrer"
-                   class="hover:text-red-700 font-light text-gray-500 mr-5">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         width="20"
-                         height="20"
-                         viewBox="0 0 24 24"
-                         fill="none"
-                         stroke="currentColor"
-                         stroke-width="2"
-                         stroke-linecap="round"
-                         stroke-linejoin="round"
-                         class="feather feather-facebook inline-block">
-                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z">
-                        </path>
-                    </svg>
-                </a>
+                <div class="flex items-center text-sm ">
 
-                <a href="https://www.instagram.com/katyrosefloral/"
-                   title="Check us out on Instagram"
-                   target="_blank"
-                   rel="noopener"
-                   rel="noreferrer"
-                   class="hover:text-red-700 font-light text-gray-500">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         width="24"
-                         height="24"
-                         viewBox="0 0 24 24"
-                         fill="none"
-                         stroke="currentColor"
-                         stroke-width="2"
-                         stroke-linecap="round"
-                         stroke-linejoin="round"
-                         class="feather feather-instagram inline-block">
-                        <rect x="2"
-                              y="2"
-                              width="20"
-                              height="20"
-                              rx="5"
-                              ry="5"></rect>
-                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                        <line x1="17.5"
-                              y1="6.5"
-                              x2="17.51"
-                              y2="6.5"></line>
-                    </svg>
-                </a>
+                    <a href="https://www.facebook.com/katyrosefloral"
+                       title="Check us out on Facebook"
+                       target="_blank"
+                       rel="noopener"
+                       rel="noreferrer"
+                       class="mr-5 font-light text-gray-500 hover:text-red-700">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="20"
+                             height="20"
+                             viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2"
+                             stroke-linecap="round"
+                             stroke-linejoin="round"
+                             class="inline-block feather feather-facebook">
+                            <path
+                                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z">
+                            </path>
+                        </svg>
+                    </a>
 
+                    <a href="https://www.instagram.com/katyrosefloral/"
+                       title="Check us out on Instagram"
+                       target="_blank"
+                       rel="noopener"
+                       rel="noreferrer"
+                       class="font-light text-gray-500 hover:text-red-700">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="24"
+                             height="24"
+                             viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2"
+                             stroke-linecap="round"
+                             stroke-linejoin="round"
+                             class="inline-block feather feather-instagram">
+                            <rect x="2"
+                                  y="2"
+                                  width="20"
+                                  height="20"
+                                  rx="5"
+                                  ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5"
+                                  y1="6.5"
+                                  x2="17.51"
+                                  y2="6.5"></line>
+                        </svg>
+                    </a>
+
+                </div>
             </div>
 
         </section>

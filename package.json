@@ -6,8 +6,11 @@
     "devDependencies": {
         "@tailwindcss/ui": "^0.3.0",
         "alpinejs": "^2.4.1",
+        "copy-webpack-plugin": "5.1.1",
         "cross-env": "^7.0.2",
+        "imagemin-webpack-plugin": "^2.4.2",
         "laravel-mix": "^5.0.4",
+        "laravel-mix-imagemin": "^1.0.3",
         "sass": "^1.26.9",
         "sass-loader": "^8.0.2",
         "tailwindcss": "^1.4.6",

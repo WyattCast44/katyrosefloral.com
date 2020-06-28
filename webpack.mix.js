@@ -1,6 +1,8 @@
 const mix = require('laravel-mix');
 const tailwindcss = require('tailwindcss')
 
+require('laravel-mix-imagemin');
+
 mix.js('resources/app.js', 'dist/js')
 
 mix.sass('resources/app.scss', 'dist/css')
@@ -8,3 +10,9 @@ mix.sass('resources/app.scss', 'dist/css')
         processCssUrls: false,
         postCss: [tailwindcss('tailwind.config.js')],
     })
+
+mix.imagemin([
+    'dist/images/full/**.*',
+    'dist/images/reviews/**.*',
+    'dist/images/thumbnails/**.*'
+]);

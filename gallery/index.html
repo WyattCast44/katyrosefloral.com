@@ -85,6 +85,7 @@
                 <template x-for="image in images">
 
                     <a :href="`./../dist/images/full/` + image + `.jpg`"
+                       title="View this image in a slideshow"
                        class="block md:h-40 h-24 bg-gray-300 rounded bg-center bg-no-repeat bg-cover glightbox"
                        :style="`background-image: url(./../dist/images/thumbnails/` + image + `.jpg);`">
                         <span class="
@@ -101,6 +102,7 @@
 
         </section>
 
+        <!-- Footer -->
         <section class="border-t py-10 mt-15 flex items-center justify-between">
 
             <div class="text-gray-700">

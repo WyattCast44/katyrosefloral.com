@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=utf-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <title>Katy Rose Floral Photo Gallery | Wedding & Event Specialist</title>
+
+    <meta name="description"
+          content="Photo Gallery - Wedding & Event Florist based in Katy, Texas">
+    <meta name="keywords"
+          content="Florist, Flowers, Houston, Texas, Florist, Flowers, Wedding Flowers, Katy Texas">
+
+    <!-- Twitter -->
+    <meta name="twitter:card"
+          content="summary" />
+    <meta name="twitter:title"
+          content="Katy Rose Floral" />
+    <meta name="twitter:description"
+          content=" | Wedding & Event Specialist in Katy Texas" />
+    <meta name="twitter:image"
+          content="dist/social/social.png" />
+
+    <!-- Facebook -->
+    <meta property="og:url"
+          content="https://katyrosefloral.com" />
+    <meta property="og:type"
+          content="website" />
+    <meta property="og:title"
+          content="Katy Rose Floral" />
+    <meta property="og:description"
+          content="Katy Rose Floral Photo Gallery | Wedding & Event Specialist in Katy Texas" />
+    <meta property="og:image"
+          content="dist/social/social.png" />
+
+    <!-- Assets -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,800;0,900;1,400;1,500;1,900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    <link rel="stylesheet"
+          href="dist/css/app.css">
+    <script src="dist/js/app.js"
+            defer></script>
+
+    <!-- Fathom -->
+    <!-- <script src="https://cdn.usefathom.com/script.js"
+            site="NUAHIXBG"
+            defer></script> -->
+</head>
+
+<body class="bg-white overflow-x-hidden antialiased text-gray-900">
+
+    <div class="container mx-auto px-5 md:px-0"
+         style="max-width: 900px;">
+
+        <!-- Logo Header -->
+        <header class="py-10">
+
+            <div class="flex items-center justify-center relative">
+
+                <h1 class="hidden"
+                    id="top">Katy Rose Floral - Wedding & Specialist in Katy Texas</h1>
+
+                <a href="/">
+                    <img src="dist/logo-full.png"
+                         alt="Katy Rose Floral Logo"
+                         class="w-96 z-10">
+                </a>
+            </div>
+
+        </header>
+
+        <!-- Gallery Preview Section -->
+        <section class="mb-20">
+
+            <h2 id="gallery"
+                class="text-5xl text-center font-fancy mb-8">Our Gallery</h2>
+
+            <div class="grid grid-cols-3 gap-5"
+                 x-data="{ images: getImages()}">
+
+                <template x-for="image in images">
+
+                    <a :href="`dist/images/full/` + image + `.jpg`"
+                       class="block md:h-40 h-24 bg-gray-300 rounded bg-center bg-no-repeat bg-cover glightbox"
+                       :style="`background-image: url(dist/images/thumbs/` + image + `_tn.jpg);`">
+                        <span class="
+                       hidden">
+                            Click to view
+                            <img :src="`dist/images/full/` + image + `.jpg`"
+                                 alt=""
+                                 class="hidden">
+                        </span>
+                    </a>
+                </template>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</body>
+
+<script>
+
+    function getImages() {
+        let images = [];
+        let numPhotos = 48;
+
+        for (var index = 1; index <= numPhotos; index++) {
+            images.push(index);
+        }
+
+        return images;
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=utf-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <title>Katy Rose Floral | Wedding & Event Specialist</title>
+
+    <meta name="description"
+          content="Wedding & Event Florist based in Katy, Texas">
+    <meta name="keywords"
+          content="Houston, Texas, Florist, Flowers, Wedding Flowers, Katy Texas">
+
+    <!-- Twitter -->
+    <meta name="twitter:card"
+          content="summary" />
+    <meta name="twitter:title"
+          content="Katy Rose Floral" />
+    <meta name="twitter:description"
+          content="Katy Rose Floral | Wedding & Event Specialist in Katy Texas" />
+    <meta name="twitter:image"
+          content="dist/social/social.png" />
+
+    <!-- Facebook -->
+    <meta property="og:url"
+          content="https://katyrosefloral.com" />
+    <meta property="og:type"
+          content="website" />
+    <meta property="og:title"
+          content="Katy Rose Floral" />
+    <meta property="og:description"
+          content="Katy Rose Floral | Wedding & Event Specialist in Katy Texas" />
+    <meta property="og:image"
+          content="dist/social/social.png" />
+
+    <!-- Assets -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,800;0,900;1,400;1,500;1,900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    <link rel="stylesheet"
+          href="dist/css/app.css">
+    <script src="dist/js/app.js"
+            defer></script>
+
+    <!-- Fathom -->
+    <!-- <script src="https://cdn.usefathom.com/script.js"
+            site="NUAHIXBG"
+            defer></script> -->
+</head>
+
+<body class="bg-white overflow-x-hidden antialiased text-gray-900">
+
+    <div class="container mx-auto px-5 md:px-0"
+         style="max-width: 900px;">
+
+        <!-- Logo Header -->
+        <header class="py-10">
+
+            <div class="flex items-center justify-center relative">
+
+                <h1 class="hidden"
+                    id="top">Katy Rose Floral - Wedding & Specialist in Katy Texas</h1>
+
+                <a href="/">
+                    <img src="dist/logo-full.png"
+                         alt="Katy Rose Floral Logo"
+                         class="w-96 z-10">
+                </a>
+            </div>
+
+        </header>
+
+        <!-- Our Story Section -->
+        <section>
+
+            <h2 class="hidden"
+                id="#our-story">Our Story</h2>
+
+            <div class="py-5">
+
+                <p class="text-3xl font-fancy italic">
+                    Hello my Name is Beatrice Cooke,
+                </p>
+
+                <p class="text-2xl mt-5">
+                    <span class="inline-block w-10"></span> I am the owner and designer for <span
+                          class="italic">
+                        Katy Rose Floral.
+                    </span> We are a floral event company based in Katy, Texas established
+                    in June of 2019. We are family owned and operated. I have been in the floral,
+                    wedding and event business for over 10 years as a designer.
+                </p>
+
+                <p class="text-2xl mt-5">
+                    <span class="inline-block w-10"></span> Our passion, experience and
+                    professionalism are unveiled in our floral products and services. We strive to
+                    bring creativity, honesty and attention to detail to each and every event. It
+                    gives me great pleasure to create a vision and touch someone's life at such a
+                    meaningful time in their life.
+                </p>
+
+                <p class="text-2xl mt-5">
+                    <span class="inline-block w-10"></span> Katy Rose Floral proudly serves the Katy
+                    Texas area for Weddings, Quinceaneras, Private and Corporate Events. We offer a
+                    customized selection of Bridal Bouquets, Ceremony Flowers, including Garlands
+                    and Centerpieces using a quality selection of flowers. It would be my pleasure
+                    to meet with you for a consultation to unveil your dream event, please <a
+                       href="#"
+                       class="font-semibold text-red-700 hover:underline">reach out</a> to us today.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Section Divider -->
+        <div class="w-full flex items-center justify-center md:my-20 my-10">
+            <img src="dist/divider-2.png"
+                 alt=""
+                 class="md:h-32 h-24 w-auto">
+        </div>
+
+        <!-- Gallery Preview Section -->
+        <section class="mb-20">
+
+            <h2 id="gallery"
+                class="text-5xl text-center font-fancy mb-8">Our Gallery</h2>
+
+            <div class="grid grid-cols-3 gap-5"
+                 x-data="{ images: getImages()}">
+
+                <template x-for="image in images">
+
+                    <a :href="`dist/images/full/` + image + `.jpg`"
+                       class="block md:h-40 h-24 bg-gray-300 rounded bg-center bg-no-repeat bg-cover glightbox"
+                       :style="`background-image: url(dist/images/thumbs/` + image + `_tn.jpg);`">
+                        <span class="
+                       hidden">
+                            Click to view
+                            <img :src="`dist/images/full/` + image + `.jpg`"
+                                 alt=""
+                                 class="hidden">
+                        </span>
+                    </a>
+                </template>
+
+            </div>
+
+            <a href="#"
+               class="text-xl mt-5 block text-center">
+                See more pictures here
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="24"
+                     height="24"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     class="feather feather-arrow-right inline-block">
+                    <line x1="5"
+                          y1="12"
+                          x2="19"
+                          y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </a>
+
+        </section>
+
+    </div>
+
+</body>
+
+<script>
+
+    function getImages() {
+        return [
+            '1',
+            '2',
+            '3',
+            '4',
+            '5',
+            '6',
+            '7',
+            '8',
+            '9',
+        ]
+    }
+
+</script>
+
+</html>

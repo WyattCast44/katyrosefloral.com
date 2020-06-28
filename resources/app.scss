@@ -1,0 +1,22 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.bg-parchment {
+    background-color: #F6F4ED;
+}
+
+a {
+    @apply text-gray-800 font-semibold;
+    transition: color .2s ease-in-out;
+}
+
+a:hover {
+    @apply text-red-700;
+}
+
+.font-fancy {
+    font-family: 'Playfair Display', serif;
+}

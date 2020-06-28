@@ -73,7 +73,7 @@
         </header>
 
         <!-- Gallery Preview Section -->
-        <section class="mb-20">
+        <section class="mb-10">
 
             <h2 id="gallery"
                 class="pb-2 mb-8 text-5xl text-center border-b font-fancy md:mb-12">Contact Us</h2>
@@ -174,7 +174,8 @@
                     </div>
 
                     <!-- Photos -->
-                    <div class="flex flex-col justify-between mt-10 md:items-start md:flex-row">
+                    <div class="flex flex-col justify-between mt-10 md:items-start md:flex-row"
+                         x-data>
                         <label for="photos"
                                class="w-full mb-3 text-left md:mb-0 md:w-1/5">If you have an example
                             photos that you like, upload them here</label>
@@ -198,21 +199,26 @@
 
                                 <p class="mt-1 text-sm text-gray-600">
                                     <button type="button"
-                                            class="font-medium text-indigo-600 transition duration-150 ease-in-out hover:text-indigo-500 focus:outline-none focus:underline">
-                                        Upload a file
+                                            x-on:click="$refs.photos.click()"
+                                            class="font-medium text-red-700 transition duration-150 ease-in-out hover:text-red-800 focus:outline-none focus:underline">
+                                        Click here to upload files
                                     </button>
-                                    or drag and drop
                                 </p>
 
                                 <p class="mt-1 text-xs text-gray-500">
-                                    PNG, JPG, GIF up to 10MB
+                                    PNG or JPG up to 5MB
                                 </p>
+
+                                <p id="submission_details"
+                                   class="mt-3 text-sm leading-none text-gray-500"></p>
 
                             </div>
 
                         </div>
 
                         <input type="file"
+                               x-ref="photos"
+                               x-on:change="handleFileUploads($event)"
                                name="photos"
                                class="hidden"
                                multiple>
@@ -225,21 +231,46 @@
                                class="w-full mb-3 text-left md:mb-0 md:w-1/5">Lastly, tell me a
                             little bit about yourself or your event</label>
                         <textarea name="story"
+                                  required
                                   class="flex-1 md:ml-8 form-textarea"
                                   rows="6"
                                   placeholder="Tell us your love story, or your vision for the event..."></textarea>
+                    </div>
+
+                    <!-- Submit button -->
+                    <div class="flex items-center justify-end mt-10">
+                        <button
+                                class="px-8 py-3 text-lg text-gray-600 bg-gray-100 border rounded shadow hover:bg-gray-200">Submit
+                            📤</button>
                     </div>
 
                     <div data-netlify-recaptcha="true"></div>
 
                 </form>
 
+                <!-- Photo Upload Message Handler -->
+                <script>
+
+                    function handleFileUploads(event) {
+                        let input = event.target
+                        let files = input.files
+                        let length = files.length
+
+                        if (length > 0) {
+                            let message = `You selected ${length} files`
+                            let messageElement = document.querySelector("#submission_details")
+                            messageElement.innerText = message
+                        }
+                    }
+
+                </script>
+
             </div>
 
         </section>
 
         <!-- Footer -->
-        <section class="pt-5 pb-8 border-t mt-15">
+        <section class="pt-5 pb-8 mt-8 border-t">
 
             <!-- Top Row -->
             <nav class="flex items-center justify-start mb-3">

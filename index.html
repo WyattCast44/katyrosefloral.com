@@ -14,6 +14,8 @@
           content="Wedding & Event Florist based in Katy, Texas">
     <meta name="keywords"
           content="Houston, Texas, Florist, Flowers, Wedding Flowers, Katy Texas">
+    <link rel="canonical"
+          href="https://katyrosefloral.com" />
 
     <!-- Twitter -->
     <meta name="twitter:card"
@@ -106,6 +108,7 @@
                     and Centerpieces using a quality selection of flowers. It would be my pleasure
                     to meet with you for a consultation to unveil your dream event, please <a
                        href="#reach-out"
+                       title="Contact us"
                        class="font-semibold text-red-700 hover:underline">reach out</a> to us today.
                 </p>
 
@@ -132,6 +135,7 @@
                 <template x-for="image in images">
 
                     <a :href="`dist/images/full/` + image + `.jpg`"
+                       title="View this image in a slideshow"
                        class="block md:h-40 h-24 bg-gray-300 rounded bg-center bg-no-repeat bg-cover glightbox"
                        :style="`background-image: url(dist/images/thumbnails/` + image + `.jpg);`">
                         <span class="
@@ -147,6 +151,7 @@
             </div>
 
             <a href="/gallery"
+               title="View more photos in our gallery"
                class="text-xl mt-5 block text-center">
                 See more pictures here
                 <svg xmlns="http://www.w3.org/2000/svg"
@@ -239,6 +244,7 @@
 
         </section>
 
+        <!-- Footer -->
         <section class="border-t py-10 mt-15 flex items-center justify-between">
 
             <div class="text-gray-700">
@@ -248,6 +254,7 @@
             <div class="flex items-center text-sm ">
 
                 <a href="https://www.facebook.com/katyrosefloral"
+                   title="Check us out on Facebook"
                    target="_blank"
                    rel="noopener"
                    rel="noreferrer"
@@ -268,6 +275,7 @@
                 </a>
 
                 <a href="https://www.instagram.com/katyrosefloral/"
+                   title="Check us out on Instagram"
                    target="_blank"
                    rel="noopener"
                    rel="noreferrer"

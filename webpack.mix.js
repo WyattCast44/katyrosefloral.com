@@ -16,3 +16,5 @@ mix.imagemin([
     'dist/images/reviews/**.*',
     'dist/images/thumbnails/**.*'
 ]);
+
+mix.browserSync();

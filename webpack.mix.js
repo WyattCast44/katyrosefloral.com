@@ -14,7 +14,7 @@ mix.sass('resources/app.scss', 'dist/css')
 mix.imagemin([
     'dist/images/full/**.*',
     'dist/images/reviews/**.*',
-    'dist/images/packages/**.*',
+    'dist/images/packages/*/**.*',
     'dist/images/thumbnails/**.*'
 ]);
 

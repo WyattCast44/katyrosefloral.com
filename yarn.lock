@@ -4045,9 +4045,9 @@ gifsicle@^4.0.0:
     logalot "^2.0.0"
 
 glightbox@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/glightbox/-/glightbox-3.0.0.tgz#1d79d4e46044806ba999e57931dc7e9e4440164d"
-  integrity sha512-xwP6D4s49zBRFz/XsKnRHXb2lmBRagrCr84mDiuftDCe0s0tdo1I6stR4mfDnvmow86gJ5PLoy4KBcdSPEmQbw==
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/glightbox/-/glightbox-3.0.3.tgz#e06e2ed620a1c5174c18f2cadf8614780671f3a8"
+  integrity sha512-lk0Uu7B1tH8/UVfaUHOUBnw+0BygW49NlP/mKrYk4LHv+jF5u7TwsfevmL7wf3ovddzn1IbpS4BwGEd3iaGJ1g==
 
 glob-parent@^3.1.0:
   version "3.1.0"

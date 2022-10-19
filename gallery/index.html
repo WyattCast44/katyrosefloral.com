@@ -75,29 +75,65 @@
         <!-- Gallery Preview Section -->
         <section class="mb-20">
 
-            <h2 id="gallery"
-                class="pb-2 mb-8 text-5xl text-center border-b font-fancy md:mb-12">Our Gallery</h2>
+            <!-- weddings -->
+            <div>
 
+                <h2 id="gallery"
+                    class="pb-2 mb-8 text-5xl text-center border-b font-fancy md:mb-12">
+                    Our Wedding Gallery
+                </h2>
 
-            <div class="grid grid-cols-3 gap-5"
-                 x-data="{ images: getImages()}">
+                <div class="grid grid-cols-3 gap-5"
+                     x-data="{ images: getWeddingImages()}">
 
-                <template x-for="image in images">
+                    <template x-for="image in images">
 
-                    <a :href="`./../dist/images/full/` + image + `.jpg`"
-                       title="View this image in a slideshow"
-                       data-glightbox=""
-                       class="block h-24 bg-gray-300 bg-center bg-no-repeat bg-cover rounded md:h-40 glightbox"
-                       :style="`background-image: url(./../dist/images/thumbnails/` + image + `.jpg);`">
-                        <span class="hidden ">
-                            Click to view
-                            <img :src="`./../dist/images/full/` + image + `.jpg`"
-                                 alt=""
-                                 class="hidden">
-                        </span>
-                    </a>
-                </template>
+                        <a :href="`./../dist/images/full/` + image + `.jpg`"
+                           title="View this image in a slideshow"
+                           data-glightbox=""
+                           class="block h-24 bg-gray-300 bg-center bg-no-repeat bg-cover rounded md:h-40 glightbox"
+                           :style="`background-image: url(./../dist/images/thumbnails/` + image + `.jpg);`">
+                            <span class="hidden ">
+                                Click to view
+                                <img :src="`./../dist/images/full/` + image + `.jpg`"
+                                     alt=""
+                                     class="hidden">
+                            </span>
+                        </a>
+                    </template>
 
+                </div>
+
+            </div>
+
+            <!-- churches -->
+            <div>
+
+                <h2 id="gallery-church"
+                    class="pb-2 mb-8 text-5xl text-center border-b font-fancy md:mb-12 mt-16">
+                    Our Church Gallery
+                </h2>
+
+                <div class="grid grid-cols-3 gap-5"
+                     x-data="{ images: getChurchImages()}">
+
+                    <template x-for="image in images">
+
+                        <a :href="`./../dist/images/full/church/` + image + `.jpg`"
+                           title="View this image in a slideshow"
+                           data-glightbox=""
+                           class="block h-24 bg-gray-300 bg-center bg-no-repeat bg-cover rounded md:h-40 glightbox"
+                           :style="`background-image: url(./../dist/images/thumbnails/church/` + image + `.jpg);`">
+                            <span class="hidden ">
+                                Click to view
+                                <img :src="`./../dist/images/full/church/` + image + `.jpg`"
+                                     alt=""
+                                     class="hidden">
+                            </span>
+                        </a>
+                    </template>
+
+                </div>
             </div>
 
         </section>
@@ -208,9 +244,20 @@
 
 <script>
 
-    function getImages() {
+    function getWeddingImages() {
         let images = [];
         let numPhotos = 48;
+
+        for (var index = 1; index <= numPhotos; index++) {
+            images.push(index);
+        }
+
+        return images;
+    }
+
+    function getChurchImages() {
+        let images = [];
+        let numPhotos = 14;
 
         for (var index = 1; index <= numPhotos; index++) {
             images.push(index);

@@ -1,10 +1,11 @@
 import Alpine from 'alpinejs'
+import GLightbox from 'glightbox'
 
 window.Alpine = Alpine
  
 Alpine.start()
 
-import GLightbox from 'glightbox'
+window.GLightbox = GLightbox;
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -15,4 +16,5 @@ document.addEventListener("DOMContentLoaded", function () {
             loop: true
         });
     }
+    
 });

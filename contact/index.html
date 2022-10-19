@@ -79,9 +79,11 @@
                 class="pb-2 text-5xl text-center border-b font-fancy">Contact Us</h2>
 
             <p class="py-2 mb-8 text-lg text-gray-500 border-b md:py-12 md:mb-12">
-                You can call us at <span class="underline select-all">713-259-9027</span>, email us
+                You can call us at <a href="tel:713-259-9027"
+                   class="underline select-all">713-259-9027</a>, email us
                 at
-                <span class="underline select-all">katyrosefloral@gmail.com</span>, check us out on
+                <a href="mailto:katyrosefloral.com"
+                   class="underline select-all">katyrosefloral@gmail.com</a>, check us out on
                 <a href="https://www.facebook.com/katyrosefloral"
                    class="underline"
                    target="_blank"
@@ -110,7 +112,7 @@
                             name</label>
                         <input type="text"
                                name="name"
-                               class="flex-1 md:ml-8 form-input"
+                               class="flex-1 md:ml-8 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-red-300 focus:border-gray-500"
                                placeholder="Your name"
                                required>
                     </div>
@@ -122,7 +124,7 @@
                             respond to you</label>
                         <input type="email"
                                name="email"
-                               class="flex-1 md:ml-8 form-input"
+                               class="flex-1 md:ml-8 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-red-300 focus:border-gray-500"
                                placeholder="your-email@email.com"
                                required>
                     </div>
@@ -132,7 +134,7 @@
                         <label for="event_type"
                                class="w-full mb-3 text-left md:mb-0 md:w-1/5">What type of event are
                             you planning?</label>
-                        <select class="flex-1 md:ml-8 form-select"
+                        <select class="flex-1 md:ml-8 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-red-300 focus:border-gray-500"
                                 name="event_type"
                                 required>
                             <option value="wedding">💐 Wedding</option>
@@ -150,12 +152,12 @@
                                class="w-full mb-3 text-left md:mb-0 md:w-1/5">When is your
                             event</label>
 
-                        <div class="flex-1 bg-white rounded-md shadow-sm md:ml-8">
+                        <div class="flex-1 bg-white rounded shadow-sm md:ml-8">
 
                             <!-- Date -->
                             <div>
                                 <input aria-label="Month"
-                                       class="relative block w-full h-10 transition duration-150 ease-in-out bg-transparent rounded-none form-input rounded-t-md focus:z-10 sm:text-sm sm:leading-5"
+                                       class="relative block w-full h-10 transition duration-150 ease-in-out bg-transparent rounded-none rounded-t focus:z-10 sm:text-sm sm:leading-5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-red-300 focus:border-gray-500"
                                        type="date"
                                        style="min-height: 40px"
                                        name="date"
@@ -167,7 +169,7 @@
 
                                 <!-- Time -->
                                 <div class="flex-1 w-1/2 min-w-0">
-                                    <input class="relative block w-full transition duration-150 ease-in-out bg-transparent rounded-none form-input rounded-bl-md focus:z-10 sm:text-sm sm:leading-5"
+                                    <input class="relative block w-full transition duration-150 ease-in-out bg-transparent rounded-none rounded-bl focus:z-10 sm:text-sm sm:leading-5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-red-300 focus:border-gray-500"
                                            type="time"
                                            name="time"
                                            style="min-height: 44px"
@@ -176,7 +178,7 @@
 
                                 <!-- Firm Date -->
                                 <div class="flex flex-1 min-w-0 -ml-px">
-                                    <select class="w-full pr-0 duration-150 ease-in-out bg-transparent rounded-t-none rounded-l-none sm:leading-5 form-select"
+                                    <select class="w-full pr-0 duration-150 ease-in-out bg-transparent rounded-t-none rounded-l-none sm:leading-5 form-select rounded-br focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-red-300 focus:border-gray-500"
                                             name="firm_date">
                                         <option value="true">Firm Date</option>
                                         <option value="false">Estimated Date</option>
@@ -198,7 +200,7 @@
 
                         <!-- File Drop Border -->
                         <div
-                             class="flex justify-center flex-1 px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md md:ml-8">
+                             class="flex justify-center flex-1 px-6 pt-5 pb-6 border-2 border-gray-400 border-dashed rounded-md md:ml-8 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-red-300 focus:border-gray-500">
 
                             <!-- File Drop Label -->
                             <div class="text-center">
@@ -248,7 +250,7 @@
                             little bit about yourself or your event</label>
                         <textarea name="story"
                                   required
-                                  class="flex-1 md:ml-8 form-textarea"
+                                  class="flex-1 md:ml-8 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-red-300 focus:border-gray-500"
                                   rows="6"
                                   placeholder="Tell us your love story, or your vision for the event..."></textarea>
                     </div>
@@ -257,10 +259,11 @@
                          class="flex items-center justify-end my-5"></div>
 
                     <!-- Submit button -->
-                    <div class="flex items-center justify-end mt-5">
+                    <div class="flex items-center justify-end mt-3">
                         <button
-                                class="px-8 py-3 text-lg text-gray-600 bg-gray-100 border rounded shadow hover:bg-gray-200">Submit
-                            📤</button>
+                                class="px-8 py-2 text-lg bg-red-800 text-white font-semibold rounded hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-red-700">
+                            Submit
+                        </button>
                     </div>
 
                 </form>
@@ -295,8 +298,6 @@
                    class="inline-block text-gray-700">Home</a>
                 <a href="/gallery"
                    class="inline-block mx-4 text-gray-700">Gallery</a>
-                <a href="/packages"
-                   class="inline-block mr-4 text-gray-700">Packages</a>
                 <a href="/contact"
                    class="inline-block text-gray-700">Contact</a>
             </nav>

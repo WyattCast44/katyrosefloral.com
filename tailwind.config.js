@@ -1,7 +1,11 @@
 module.exports = {
-    purge: [
-        './**/*.html',
-        './**/*.js',
+    content: [
+        './contact/index.html',
+        './gallery/index.html',
+        './packages/index.html',
+        './thank-you/index.html',
+        './index.html',
+        './resources/*.{css,js,scss,svg}',
     ],
     theme: {
         extend: {
@@ -14,6 +18,8 @@ module.exports = {
     },
     variants: {},
     plugins: [
-        require('@tailwindcss/ui'),
+        require('@tailwindcss/aspect-ratio'),
+        require('@tailwindcss/typography'),
+        require('@tailwindcss/forms'),
     ],
 }

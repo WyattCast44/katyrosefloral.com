@@ -1,5 +1,4 @@
 from genericpath import isdir
-from itertools import chain
 import os
 from PIL import Image
 from pathlib import Path
@@ -95,7 +94,7 @@ for imagePath in thumbnails:
 
 
 """
-Step 3.
+Step 4.
 We need to copy all full sized images from the "full" folder
 to the "thumbnails" folder
 """
@@ -124,7 +123,7 @@ for imagePath in churchImages:
         copyfile(srcPath, destPath)
 
 """
-Step 4.
+Step 5.
 We need to transform every picture in the 
 thumbnails folder to a smaller "thumbnail"
 version

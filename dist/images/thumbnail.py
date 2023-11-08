@@ -77,6 +77,29 @@ for imagePath in churchImages:
             raise IOError
             print("cannot convert", imagePath)
 
+print('==> Converting "full/funeral" images to jpg...')
+
+funeralImages = os.listdir("full/funeral")
+
+for imagePath in funeralImages:
+
+    filename, extension = os.path.splitext(imagePath)
+
+    imagePath = os.getcwd() + "/full/funeral/" + imagePath
+
+    if extension in [".png"]:
+
+        newFile = os.getcwd() + "/full/funeral/" + filename + ".jpg"
+
+        try:
+            with Image.open(imagePath) as imageFile:
+                tmpImage = imageFile.convert("RGB")
+                tmpImage.save(newFile)
+            os.remove(imagePath)
+        except IOError:
+            raise IOError
+            print("cannot convert", imagePath)
+
 """
 Step 3.
 We need to delete any existing thumbnails
@@ -123,6 +146,17 @@ for imagePath in churchImages:
     if(not isdir(srcPath)): 
         copyfile(srcPath, destPath)
 
+print("==> Copying 'full/funderal' images to thumbnails...")
+
+for imagePath in funeralImages:
+
+    srcPath = os.getcwd() + "/full/funeral/" + imagePath
+
+    destPath = os.getcwd() + "/thumbnails/funeral/" + imagePath
+
+    if(not isdir(srcPath)): 
+        copyfile(srcPath, destPath)
+
 """
 Step 4.
 We need to transform every picture in the 
@@ -162,6 +196,29 @@ thumbnails = os.listdir("thumbnails/church")
 for imagePath in thumbnails:
 
     imagePath = os.getcwd() + "/thumbnails/church/" + imagePath
+
+    if(isdir(imagePath)):
+        continue
+
+    destFile = os.path.splitext(imagePath)[0] + ".jpg"
+
+    try:
+        with Image.open(imagePath) as imageFile:
+            imageFile.thumbnail(thumbnailSize)
+            imageFile.save(destFile, "JPEG")
+    except IOError:
+        raise(IOError)
+        print("cannot create thumbnail for", imagePath)
+
+print("==> Converting 'full/funeral' images to thumbnails...")
+
+thumbnailSize = (400, 400)
+
+thumbnails = os.listdir("thumbnails/funeral")
+
+for imagePath in thumbnails:
+
+    imagePath = os.getcwd() + "/thumbnails/funeral/" + imagePath
 
     if(isdir(imagePath)):
         continue

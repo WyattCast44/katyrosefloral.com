@@ -97,6 +97,7 @@
                                 Click to view
                                 <img :src="`./../dist/images/full/` + image + `.jpg`"
                                      alt=""
+                                     loading="lazy"
                                      class="hidden">
                             </span>
                         </a>
@@ -128,6 +129,38 @@
                                 Click to view
                                 <img :src="`./../dist/images/full/church/` + image + `.jpg`"
                                      alt=""
+                                     loading="lazy"
+                                     class="hidden">
+                            </span>
+                        </a>
+                    </template>
+
+                </div>
+            </div>
+
+            <!-- funeral -->
+            <div>
+
+                <h2 id="funeral"
+                    class="pb-2 mt-16 mb-8 text-5xl text-center border-b font-fancy md:mb-12">
+                    Our Funeral Gallery
+                </h2>
+
+                <div class="grid grid-cols-3 gap-5"
+                     x-data="{ images: getFuneralImages()}">
+
+                    <template x-for="image in images">
+
+                        <a :href="`./../dist/images/full/funeral/` + image + `.jpg`"
+                           title="View this image in a slideshow"
+                           data-glightbox=""
+                           class="block h-24 bg-gray-300 bg-center bg-no-repeat bg-cover rounded md:h-40 glightbox"
+                           :style="`background-image: url(./../dist/images/thumbnails/funeral/` + image + `.jpg);`">
+                            <span class="hidden">
+                                Click to view
+                                <img :src="`./../dist/images/full/funeral/` + image + `.jpg`"
+                                     alt=""
+                                     loading="lazy"
                                      class="hidden">
                             </span>
                         </a>
@@ -149,6 +182,8 @@
                    class="inline-block text-gray-700">Church Gallery</a>
                 <a href="/gallery#wedding"
                    class="inline-block text-gray-700">Wedding Gallery</a>
+                <a href="/gallery#funeral"
+                   class="inline-block text-gray-700">Funeral Gallery</a>
                 <a href="/contact"
                    class="inline-block text-gray-700">Contact</a>
             </nav>
@@ -258,6 +293,17 @@
     }
 
     function getChurchImages() {
+        let images = [];
+        let numPhotos = 14;
+
+        for (var index = 1; index <= numPhotos; index++) {
+            images.push(index);
+        }
+
+        return images;
+    }
+
+    function getFuneralImages() {
         let images = [];
         let numPhotos = 14;
 
